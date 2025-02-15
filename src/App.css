@@ -1,0 +1,87 @@
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #222;
+}
+
+/* Main Layout */
+main {
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  /* A subtle gradient for the overall background */
+  background: linear-gradient(135deg, #2c3e50, #bdc3c7);
+}
+
+/* Left & Right Panels */
+main .left,
+main .right {
+  height: 100%;
+  flex: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Left Panel: Code Editor Area */
+main .left {
+  /* Vibrant gradient background */
+  background: linear-gradient(145deg, #141e30, #243b55);
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 1rem;
+  background-color: #1a1a1a;
+  color: #f8f8f2;
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* Review Button */
+main .left .review {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  /* Bold gradient button with vibrant colors */
+  background: linear-gradient(45deg, #ff6b6b, #feca57);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+main .left .review:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Right Panel: Review Display Area */
+main .right {
+  background: #2d3436;
+  padding: 2rem;
+  font-size: 1.25rem;
+  color: #dfe6e9;
+  overflow: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
